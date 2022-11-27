@@ -1,0 +1,17 @@
+{
+  "signup": [
+    {
+      "username": "okogg",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "username": "sdfgsdfg",
+      "password": "sfgsfdgsdfg",
+      "id": 2
+    }
+  ],
+  "orders": [
+    
+  ]
+}

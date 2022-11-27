@@ -1,0 +1,31 @@
+.cart-top{
+    display:flex;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: cornsilk;
+    background-clip: border-box;
+    position: relative;
+    flex-direction: column;
+    border:1px solid black;
+    border-radius: .25re;
+}
+
+.items{
+    margin:0px 15px;
+    text-align: center;
+}
+
+.items img{
+    width: 65px;
+}
+
+.items a:hover{
+    color:blue
+}
+
+.itemdata{
+    white-space:nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+    max-width:100ch
+}

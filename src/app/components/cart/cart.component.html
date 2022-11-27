@@ -1,0 +1,53 @@
+<ng-container *ngIf="products.length!=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="card-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Ürün Sırası</th>
+                            <th>Ürün Adı</th>
+                            <th>Ürün Resmi</th>
+                            <th>Ürcret</th>
+                            <th>Adet</th>
+                            <th>Toplam</th>
+                            <th>Seçenekler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of products, let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.title}}</td>
+                            <td><img src="{{item.image}}" style="width:120px;" alt=""></td>
+                            <td style="width:15%;">{{item.price}}</td>
+                            <td style="width:15%;">{{item.quantity}}</td>
+                            <td style="width:15%;">{{item.total}}</td>
+                            <td><button class="btn btn-danger" (click)="removeProduct(item)"><i class="fas fa-trash"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button class="btn btn-danger" (click)="removeAllProducts()">Kartı Boşalt</button></td>
+                            <td><button class="btn btn-warning" routerLink="/products">Ürün Ekle</button></td>
+                            <td><button class="btn btn-success" (click)="saveData()">Ödeme Yap</button></td>
+                            <td><strong>Toplam: {{allProducts}} ₺</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="products.length==0">
+    <div class="container">
+        <div class="card">
+            <h4 class="card-title">Kartım</h4>
+        </div>
+        <div class="center">
+            <img src="" alt="">
+            <h5>Kartın Boş</h5>
+            <h6>Ürün Ekle</h6>
+            <button class="btn btn-primary" routerLink="/products">Satın Al</button>  
+        </div>
+    </div>
+</ng-container>

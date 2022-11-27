@@ -1,0 +1,19 @@
+<div class="container">
+    <form [formGroup]="login" (ngSubmit)="logindata(login)" class="form-box">
+        <h3>Login</h3>
+        <div class="form-group">
+            <label>Kullanıcı Adı:</label>
+            <input type="text" formControlName="username" autocomplete="off" class="form-control mb-3 mt-3" placeholder="Kullanıcı Adı..." required>
+        </div>
+        <small *ngIf="login.controls['username'].dirty && login.hasError('required','username')" class="text-danger">Kullanıcı Adı Girilmesi Zorunludur.</small>
+        <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label">Parola:</label>
+            <input type="password" formControlName="password" class="form-control mb-3 mt-3" placeholder="Parola..." required>
+        </div>
+        <small *ngIf="login.controls['password'].dirty && login.hasError('required','password')" class="text-danger">Parola Girilmesi Zorunludur.</small><br>
+        <span>Hesabın Yok mu?t<a id="signup" routerLink="/Signup">Hesap Oluştur</a></span>
+        <br/>
+        <button type="submit" class="btn btn-success">Giriş</button>
+    </form>
+</div>
+

@@ -1,0 +1,14 @@
+<div class="container-detail">
+    <div class="row">
+        <ng-container>
+            <div class="card col-md-9">
+                <img src="{{itemProd.image}}" style="height: 250px; width: 500px; margin-left:250px">
+                <h5 class="itemdata">{{itemProd.title}}</h5>
+                <p class="itemdata">{{itemProd.description| slice:0:150}}</p>
+                <p class="itemdata">{{itemProd.description| slice:151:300}}</p>
+                <p class="itemdata">{{itemProd.description| slice:301:450}}</p>
+                <button class="btn btn-primary" routerLink="/products">Geri Dön</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
